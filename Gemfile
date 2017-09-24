@@ -27,3 +27,6 @@ end
 
 
 gem 'validates_email_format_of'
+gem 'active_attr'
+gem 'slim-rails'
+gem "letter_opener", :group => :development
