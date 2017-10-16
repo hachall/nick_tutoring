@@ -1,0 +1,82 @@
+<%= render 'shared/aux_navbar' %>
+<div class="home-body">
+  <div class="container">
+    <div class="tutor-block" id="nick">
+      <div class="row">
+        <div class="tutor-section col-xs-12 col-md-5">
+          <div class="personal-details">
+            <div id="map3" style="height: 250px; width: 100%"></div>
+            <div class="avatar">
+              <img src="profilepic.jpg" alt="" style="height: 100px">
+            </div>
+          </div>
+        </div>
+        <div class="tutor-section col-xs-12 col-md-7">
+          <div class="work-details">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tutor-block" id="hamish">
+      <div class="row">
+        <div class="tutor-section col-xs-12 col-md-7">
+          <div class="work-details">
+
+          </div>
+        </div>
+        <div class="tutor-section col-xs-12 col-md-5">
+          <div class="personal-details">
+            <div id="map4" style="height: 250px; width: 100%"></div>
+            <div class="avatar">
+              <img src="profilepic.jpg" alt="" style="height: 100px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= content_for :after_js do %>
+  <script src="https://maps.google.com/maps/api/js"></script>
+  <script src="https://cdn.rawgit.com/apneadiving/Google-Maps-for-Rails/master/js_compilation/gmaps_google.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer_compiled.js"></script>
+
+  <script>
+    var styles = [{"featureType":"administrative.country","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"geometry.stroke","stylers":[{"visibility":"off"},{"saturation":"-100"},{"lightness":"-100"},{"invert_lightness":true}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway.controlled_access","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"transit.line","elementType":"labels.icon","stylers":[{"visibility":"off"}]}];
+    var handler_map3 = Gmaps.build('Google');
+    handler_map3.buildMap({ internal: { id: 'map3' } }, function() {
+      markers = handler_map3.addMarkers(
+        [
+          {
+            "lat": 51.485408,
+            "lng": -0.186356,
+            "infowindow": "<p>38 Redcliffe Gardens, SW10 9HA</p>"
+          }
+        ]
+      );
+      handler_map3.bounds.extendWith(markers);
+      handler_map3.fitMapToBounds();
+      handler_map3.getMap().setZoom(14);
+    });
+
+    var handler_map4 = Gmaps.build('Google');
+    handler_map4.buildMap({ internal: { id: 'map4' } }, function() {
+      markers = handler_map4.addMarkers(
+        [
+          {
+            "lat": 51.496878,
+            "lng": -0.226785,
+            "infowindow": "<p>90 Hammermsith Grove, W6 7HB</p>"
+          }
+        ]
+      );
+      handler_map4.bounds.extendWith(markers);
+      handler_map4.fitMapToBounds();
+      handler_map4.getMap().setZoom(14);
+    });
+  </script>
+<% end %>

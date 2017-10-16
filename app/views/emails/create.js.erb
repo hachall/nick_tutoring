@@ -1,0 +1,6 @@
+<% if @email.errors.any? %>
+  var msgModalContainer = document.getElementById('contactModal');
+  msgModalContainer.innerHTML = "<%= j render 'shared/contact_modal', email: @email %>";
+<% else %>
+  window.location='<%= root_path %>'
+<% end %>

@@ -1,22 +1,40 @@
 /* Main navbar */
 .navbar-tutor {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: $dark-blue;
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  // background: $charcoal;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: $merriweather;
+
+}
+.navbar-aux {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: $charcoal;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $merriweather;
+
 }
 
 /* Logo */
-.navbar-tutor-brand .fa-book {
+.navbar-tutor-brand {
   color: white;
+  font-size: 18px;
   &:hover {
     color: #979797;
+    text-decoration: none;
   }
 }
+
+
 
 /* Right section */
 .navbar-tutor-right {
@@ -34,7 +52,7 @@
 /* Navbar link */
 .navbar-tutor-link {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 .navbar-tutor-link:hover {
   color: #979797;
@@ -73,3 +91,7 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+
+
+
