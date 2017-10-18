@@ -31,3 +31,11 @@ gem 'active_attr'
 gem 'slim-rails'
 gem "letter_opener", group: :development
 gem "geocoder"
+
+
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
