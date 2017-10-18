@@ -1,6 +1,6 @@
 .banner {
-  background-image: radial-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%), url(asset-path('notepad'));
-  background-position: 50% 80%;
+  background-image: radial-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%), url(asset-path('shutterstock'));
+  background-position: 0% 100%;
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -17,18 +17,28 @@
   align-items: center;
 }
 .banner-content {
-  margin-top: -50px;
+  margin-top: 30px;
+  margin-left: -430px;
   color: white;
-  width: 403px;
+  width: 450px;
   h1 {
-    font-size: 60px;
+    font-size: 75px;
     font-family: $playfair;
+    text-align: left;
   }
   p {
     margin-top: 10px;
     margin-bottom: 20px;
     font-family: $merriweather;
     font-weight: lighter;
+    text-align: left;
+  }
+}
+@media(max-width: 900px) {
+  .banner-content {
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 .enquire-button {
@@ -36,11 +46,15 @@
   border-radius: 3px;
   padding: 5px 10px;
   background-color: rgba(0,0,0,0);
+  color: white;
+  font-size: 22px;
+  font-family: $merriweather;
   &:hover {
     color: white;
     transform: scale(1.1)
   }
   &:focus {
+    color: white;
     outline: 0;
   }
 }
@@ -48,11 +62,14 @@
   position: absolute;
   bottom: 30px;
   color: white;
+  opacity: 0.7;
   &:hover {
-    color: #979797;
+    opacity: 1.0;
+    color: white;
     text-decoration: none;
   }
 }
+
 
 
 

@@ -10,11 +10,13 @@
       <%= simple_form_for email, remote: true do |f| %>
         <%= f.input :email_address %>
         <%= f.input :message %>
-        <%= f.submit %>
+        <div class="modal-button">
+          <%= f.submit "Send Enquiry", :class => "create-btn" %>
+        </div>
       <% end %>
     </div>
-    <div class="modal-footer">
+    <!-- <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -6,23 +6,34 @@
     font-size: 50px;
     margin-bottom: -7px;
   }
-  background-color: rgb(240,240,240);
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  // background-color: rgb(240,240,240);
+  // box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   border-radius: 4px;
   padding: 7px;
-  margin: 50px;
+  // margin: 50px;
 }
 .home-page-tutor-section {
   // height: 530px;
   background-color: white;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  border: 5px solid white;
   border-radius: 3px;
   margin-top: 25px;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+@media(max-width: 991px) {
+  .home-page-tutor-section {
+    margin-top: 25px;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+  }
 }
 .tutors-button {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: 3px solid $charcoal;
+  background-color: white;
   color: $charcoal;
   font-size: 25px;
   font-family: $merriweather;
@@ -41,9 +52,21 @@
 }
 
 .avatar {
-  border-radius: 50%
+  border-radius: 50%;
+  border: 5px solid white;
 }
 #nickphoto {
+    position: absolute;
+    left: 33px;
+    top: 200px;
+    z-index: 2;
+}
+#hamishphoto {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
   position: absolute;
     left: 33px;
     top: 200px;
@@ -74,7 +97,7 @@
 
 .tutor-bottom-section {
   display: flex;
-  overflow: hidden;
+
 }
 .tutor-quote {
   position: relative;
@@ -83,24 +106,47 @@
   display: flex;
   align-items: center;
   padding: 23px;
-  padding-bottom: 1000px;
-    margin-bottom: -1000px;
+  margin-top: 20px;
   p {
     font-size: 15px;
     color: $charcoal;
     font-family: $merriweather;
   }
+  quotes: '\201c' '\201d';
+}
+.tutor-quote:before {
+  content: '\201C';
+  font-size: 60px;
+  height: 40px;
+  font-family: $catamaran;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.tutor-quote:after {
+  content: '\201D';
+  font-size: 60px;
+  height: 40px;
+  font-family: $catamaran;
+  bottom: 15px;
+  right: 15px;
+  position: absolute;
 }
 .short-details {
   flex: 0 0 30% !important;
-  // position: relative;
   color: $charcoal;
   margin-top: 75px;
   margin-left: 10px;
   margin-bottom: 10px;
-  padding-bottom: 1000px;
-    margin-bottom: -1000px;
 }
+.quote-mark {
+  font-size: 70px;
+  height: 40px;
+  font-family: $catamaran;
+  margin: 0px;
+}
+
+
 
 
 

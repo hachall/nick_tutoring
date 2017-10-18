@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :emails, only: [:create]
 
   get "/tutors", to: "pages#tutors"
-  get "/testimonials", to: "pages#testimonials"
 end
