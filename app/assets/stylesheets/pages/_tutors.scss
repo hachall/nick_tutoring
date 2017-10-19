@@ -12,3 +12,11 @@
 .tutor-section {
   height: 600px;
 }
+.in-progress {
+  background-image: radial-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%), url(asset-path('pageinprogress'));
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  height: calc(100vh - 70px);
+  width: 100%;
+}
