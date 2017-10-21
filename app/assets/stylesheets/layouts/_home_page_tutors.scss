@@ -52,14 +52,15 @@
 }
 
 .avatar {
-  border-radius: 50%;
-  border: 5px solid white;
   display: inline-block;
-  background-size: cover;
+  background-position: 10% 50%;
   width: 150px;
   height: 150px;
+  border-radius: 50%;
   overflow: hidden;
+  border: 3px solid white;
 }
+img {max-height: 100%;}
 #nickphoto {
     position: absolute;
     left: 33px;
@@ -67,7 +68,6 @@
     z-index: 2;
 }
 #hamishphoto {
-
 
   position: absolute;
   left: 33px;
